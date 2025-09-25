@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Portal - Jeevan Aadhar</title>
+    <link rel="stylesheet" href="institute_style.css">
+</head>
+<body>
+    <header>
+        <h1>Jeevan Aadhar - Institute Portal</h1>
+    </header>
+
+    <div class="container">
+        <!-- Institute Details Form -->
+        <section id="institute-details">
+            <h2>Enter Institute Details</h2>
+            <form id="details-form">
+                <div class="form-group">
+                    <label for="institute-name">Institute Name:</label>
+                    <input type="text" id="institute-name" name="institute-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="institute-address">Address:</label>
+                    <textarea id="institute-address" name="institute-address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="institute-contact">Contact Number:</label>
+                    <input type="tel" id="institute-contact" name="institute-contact" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="institute-email">Email:</label>
+                    <input type="email" id="institute-email" name="institute-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="institute-Registration Number">Registration Number:</label>
+                    <input type="Registration Number" id="institute-Registration Number" name="institute-Registration Number" required>
+                </div>
+
+                <button type="submit">Save Details</button>
+            </form>
+        </section>
+
+        <!-- Institute Information Section -->
+        <section id="institute-info" class="hidden">
+            <h2>Institute Information</h2>
+            <div class="info-card">
+                <p><strong>Institute Name:</strong> <span id="display-name"></span></p>
+                <p><strong>Address:</strong> <span id="display-address"></span></p>
+                <p><strong>Contact:</strong> <span id="display-contact"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Registration Number:</strong> <span id="display-Registration Number"></span></p>
+            </div>
+        </section>
+
+        <!-- Orphanage Overview Section -->
+        <section id="overview" class="hidden">
+            <h2>Orphanage Overview</h2>
+            <div class="info-card">
+                <h3>About Us</h3>
+                <p>Hope Orphanage is a non-profit organization dedicated to providing shelter, education, and care to underprivileged children. We believe in empowering every child to reach their full potential.</p>
+                <h3>Mission & Vision</h3>
+                <p><strong>Mission:</strong> To provide a safe and nurturing environment for children in need.</p>
+                <p><strong>Vision:</strong> A world where every child has access to education, healthcare, and love.</p>
+                <h3>Facilities</h3>
+                <ul>
+                    <li>Shelter for 100+ children</li>
+                    <li>Educational support</li>
+                    <li>Medical care</li>
+                    <li>Recreational activities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Raise Requirements Section -->
+        <section id="raise-requirements" class="hidden">
+            <h2>Raise a Requirement</h2>
+            <form id="institute-form">
+                <div class="form-group">
+                    <label for="category">Category of Requirement:</label>
+                    <select id="category" name="category" required>
+                        <option value="Food">Food</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Education">Education</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Essentials">Essentials</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Detailed Description:</label>
+                    <textarea id="description" name="description" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">Urgency Level:</label>
+                    <select id="urgency" name="urgency" required>
+                        <option value="Immediate">Immediate</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="documents">Supporting Documents:</label>
+                    <input type="file" id="documents" name="documents">
+                </div>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+
+        <!-- Donation Transparency Section -->
+        <section id="transparency" class="hidden">
+            <h2>Donation Transparency</h2>
+            <div class="info-card">
+                <h3>Past Donations Received</h3>
+                <ul>
+                    <li>₹50,000 - Food Supplies (Jan 2023)</li>
+                    <li>₹30,000 - School Supplies (Feb 2023)</li>
+                    <li>₹20,000 - Medical Aid (Mar 2023)</li>
+                </ul>
+                <h3>Impact Stories</h3>
+                <p>Thanks to your generous donations, we were able to provide education to 50 children and medical care to 30 others.</p>
+                <h3>Utilization Reports</h3>
+                <p><a href="#">Download Report (PDF)</a></p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="call-to-action" class="hidden">
+            <h2>How You Can Help</h2>
+            <div class="cta-buttons">
+                <button class="cta-button">Donate Now</button>
+                <button class="cta-button">Sponsor a Child</button>
+                <button class="cta-button">Volunteer</button>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="hidden">
+            <h2>Testimonials</h2>
+            <div class="testimonial-card">
+                <p>"Hope Orphanage has changed the lives of so many children. I'm proud to support their mission."</p>
+                <p><strong>- John Doe, Donor</strong></p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Volunteering here has been a life-changing experience. The children are full of hope and joy."</p>
+                <p><strong>- Jane Smith, Volunteer</strong></p>
+            </div>
+        </section>
+
+        <!-- Back to Home Link -->
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Jeevan Aadhar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission and display details
+        document.addEventListener('DOMContentLoaded', () => {
+            const detailsForm = document.getElementById('details-form');
+            const instituteInfo = document.getElementById('institute-info');
+            const overview = document.getElementById('overview');
+            const raiseRequirements = document.getElementById('raise-requirements');
+            const transparency = document.getElementById('transparency');
+            const callToAction = document.getElementById('call-to-action');
+            const testimonials = document.getElementById('testimonials');
+
+            const displayName = document.getElementById('display-name');
+            const displayAddress = document.getElementById('display-address');
+            const displayContact = document.getElementById('display-contact');
+            const displayEmail = document.getElementById('display-email');
+            const displayRegistrationNumber = document.getElementById('display-Registration Number');
+
+            detailsForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('institute-name').value;
+                const address = document.getElementById('institute-address').value;
+                const contact = document.getElementById('institute-contact').value;
+                const email = document.getElementById('institute-email').value;
+                const RegistrationNumber  = document.getElementById('institute-Registration Number').value;
+
+
+                // Display values
+                displayName.textContent = name;
+                displayAddress.textContent = address;
+                displayContact.textContent = contact;
+                displayEmail.textContent = email;
+                displayRegistrationNumber.textContent = RegistrationNumber;
+
+                // Show hidden sections
+                instituteInfo.classList.remove('hidden');
+                overview.classList.remove('hidden');
+                raiseRequirements.classList.remove('hidden');
+                transparency.classList.remove('hidden');
+                callToAction.classList.remove('hidden');
+                testimonials.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

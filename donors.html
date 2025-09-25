@@ -1,0 +1,237 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jeevan Aadhar - Donors</title>
+        <link rel="stylesheet" href="donors.css">
+    </head>
+    <body>
+        <header>
+            <h1><bold>Jeevan Aadhar - Donors</bold></h1>
+            <p>Contribute directly to verified institutes and track your impact.</p>
+        </header>
+
+        <section class="food-items">
+            <div class="container-fluid my-0 px-4">
+                <img src="https://i.pinimg.com/736x/9e/bc/b0/9ebcb073d346fd9b345049b2aa4ef1c5.jpg" width="300px" height="200px" alt="Rice">
+                <h2>Rice</h2>
+                <p>High-quality rice to feed the needy.</p>
+                <p class="price">Rs.10</p>
+                <button onclick="addToCart('Rice', 10)">Add to Cart</button>
+            </div>
+
+            <div class ="container-fluid my-0 px-4">
+                <img src="https://i.pinimg.com/736x/8b/50/1d/8b501d77427214d473358d0a55d33d45.jpg" width="300px" height="200px" alt="Flour">
+                <h2>Flour</h2>
+                <p>Nutritious flour for baking and cooking.</p>
+                <p class="price">Rs.8</p>
+                <button onclick="addToCart('Flour', 8)">Add to Cart</button>
+            </div>
+
+            <div class="container-fluid my-0 px-4">
+                <img src="https://i.pinimg.com/736x/09/ad/24/09ad244a3944b3716d4d68f725412141.jpg" width="300px" height="200px" alt="Beans">
+                <h2>Beans</h2>
+                <p>Protein-rich beans for a healthy diet.</p>
+                <p class="price">Rs.5</p>
+                <button onclick="addToCart('Beans', 5)">Add to Cart</button>
+            </div>
+
+            <div class="container-fluid my-0 px-4">
+                <img src="https://i.pinimg.com/736x/27/53/e8/2753e80f039c896f4f1ba405cbdd9911.jpg" width="300px" height="200px" alt="Beans">
+                <h2>Peanuts</h2>
+                <p>Great source of energy.</p>
+                <p class="price">Rs.5</p>
+                <button onclick="addToCart('Beans', 5)">Add to Cart</button>
+            </div>
+            
+            <div class="container-fluid my-0 px-4">
+                <img src="https://i.pinimg.com/736x/06/fc/85/06fc85a130eabcc88ed559232cbfdf0d.jpg" width="300px" height="200px" alt="Beans">
+                <h2>Milk</h2>
+                <p>Rich in calcium.</p>
+                <p class="price">Rs.25</p>
+                <button onclick="addToCart('Milk', 25)">Add to Cart</button>
+            </div>
+            
+            <div class="container-fluid my-0 px-4">
+                <img src="https://i.pinimg.com/736x/20/bd/b2/20bdb2f36a7d4c2ea23891dfe27687b2.jpg" width="300px" height="200px" alt="Beans">
+                <h2>Eggs</h2>
+                <p>Rich in protein</p>
+                <p class="price">Rs.7</p>
+                <button onclick="addToCart('Eggs', 7)">Add to Cart</button>
+            </div>
+
+        </section>
+
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: Rs<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jeevan Aadhar - Donors</title>
+        <link rel="stylesheet" href="donors.css">
+        <script defer src="script.js"></script>
+    </head>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feed the Homeless - Jeevan Aadhar</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            :root {
+                --primary: #2A9D8F;
+                --secondary: #264653;
+                --accent: #E76F51;
+            }
+    
+            .cause-header {
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                            url('https://images.unsplash.com/photo-1570303345338-e1f0ed7b8cc7');
+                background-size: cover;
+                color: white;
+                padding: 4rem 0;
+                border-radius: 15px;
+            }
+    
+            .donation-card {
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+    
+            .form-label {
+                font-weight: 600;
+                color: var(--secondary);
+            }
+    
+            .recommended-cause {
+                transition: transform 0.2s;
+                border: none;
+            }
+    
+            .recommended-cause:hover {
+                transform: translateY(-5px);
+            }
+    
+            .donor-badge {
+                background: #f8f9fa;
+                border-radius: 8px;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+    
+            .price-tag {
+                font-size: 1.5rem;
+                color: var(--primary);
+                font-weight: bold;
+            }
+    
+            .btn-donate {
+                background: var(--primary);
+                color: white;
+                padding: 0.8rem 2rem;
+                border-radius: 25px;
+            }
+        </style>
+    </head>
+    <body class="bg-light">
+    
+    <div class="container py-5">
+        <!-- Main Cause Section -->
+        <section class="cause-header text-center mb-5">
+            <h1 class="display-4 mb-3">Feed a Homeless Person</h1>
+            <div class="price-tag mb-4">₹25 / Person</div>
+            <p class="lead mx-auto" style="max-width: 800px">
+                Help provide nutritious meals to homeless individuals across India. 
+                Your contribution ensures they get balanced meals with essential nutrients.
+            </p>
+        </section>
+    
+        <div class="row g-4">
+            <!-- Donation Form -->
+            <div class="col-lg-6">
+                <div class="donation-card p-4 bg-white">
+                    <h3 class="mb-4">Donate Food</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Donor Name*</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+    
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Email*</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone*</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+    
+                        <div class="mb-3">
+                            <label class="form-label">Number of Meals</label>
+                            <input type="number" class="form-control" value="20">
+                        </div>
+    
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span>Total Amount:</span>
+                            <span class="price-tag">₹500</span>
+                        </div>
+    
+                        <button class="btn btn-donate w-100">DONATE NOW</button>
+                    </form>
+                </div>
+            </div>
+
+             Recommended Causes ->
+            <div class="col-lg-6">
+                <h4 class="mb-4">Recommended Causes</h4>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card recommended-cause h-100">
+                            <div class="card-body">
+                                <h5>School Bag</h5>
+                                <div class="price-tag">₹500</div>
+                                <p>Provide school supplies for underprivileged children</p>
+                                <button class="btn btn-sm btn-donate">Donate</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add other recommended causes similarly -->
+                </div>
+    
+                <!--Recent Donors -->
+                <div class="mt-5">
+                    <h4 class="mb-4">Recent Donors</h4>
+                    <div class="donor-badge">
+                        <div class="d-flex justify-content-between">
+                            <span>Swanika</span>
+                            <span>₹550</span>
+                        </div>
+                    </div>
+                    <!--- Add more donor badges -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src=script.js></script>
+    </body>
+    </html>
+

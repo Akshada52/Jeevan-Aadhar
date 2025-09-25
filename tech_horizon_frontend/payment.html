@@ -1,0 +1,127 @@
+<!-- Payment Integration Page -->
+<section id="payments" class="section hidden">
+    <h1>Payment Integration</h1>
+    <link rel="stylesheet" href="order.css">
+    
+        <!-- Payment Gateway Card -->
+        <div class="payment-card">
+            <h2>Payment Gateways</h2>
+            <p>Connect your preferred payment gateway to receive payments.</p>
+            <button class="btn connect-gateway">Connect Gateway</button>
+        </div>
+
+        <!-- Transaction History Card -->
+        <div class="payment-card my-4 px-0">
+            <h2>Transaction History</h2>
+            <div class="table-container">
+                <table class="transaction-table"> 
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-10-01</td>
+                            <td>₹5,000</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-05</td>
+                            <td>₹3,500</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order Details Page -->
+<section id="order-details" class="section hidden">
+    <h1>Order Details</h1>
+    <div class="order-details-container">
+        <!-- Order Information -->
+        <div class="order-info">
+            <h3>Order #123</h3>
+            <p><strong>Status:</strong> <span class="status pending">Pending</span></p>
+            <p><strong>Date:</strong> 2023-10-01</p>
+            <p><strong>Total Amount:</strong> ₹5,000</p>
+        </div>
+
+        <!-- Order Items -->
+        <div class="order-items">
+            <h3>Items</h3>
+            <div class="table-container">
+                <table class="items-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medical Kits</td>
+                            <td>50</td>
+                            <td>₹100</td>
+                        </tr>
+                        <tr>
+                            <td>Food Packages</td>
+                            <td>100</td>
+                            <td>₹30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Delivery Information -->
+        <div class="delivery-info">
+            <h3>Delivery Details</h3>
+            <p><strong>Address:</strong> 123 Main St, City, Country</p>
+            <p><strong>Expected Delivery:</strong> 2023-10-10</p>
+        </div>
+    </div>
+</section>
+
+<!-- Terms and Conditions Section -->
+<section id="terms-and-conditions" class="section">
+    <h1>Terms and Conditions</h1>
+    <div class="terms-content">
+        <p>
+            By using our payment integration services, you agree to the following terms and conditions to ensure high security and minimize fraud:
+        </p>
+        <ul>
+            <li>
+                <strong>Secure Transactions:</strong> All payments are processed through encrypted channels to protect your financial information.
+            </li>
+            <li>
+                <strong>Fraud Prevention:</strong> We monitor all transactions for suspicious activity and may require additional verification for high-risk payments.
+            </li>
+            <li>
+                <strong>Data Privacy:</strong> Your personal and financial data will not be shared with third parties without your consent.
+            </li>
+            <li>
+                <strong>Refund Policy:</strong> Refunds are subject to verification and may take up to 7 business days to process.
+            </li>
+            <li>
+                <strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your account credentials. Notify us immediately of any unauthorized access.
+            </li>
+        </ul>
+        <p>
+            Failure to comply with these terms may result in the suspension of your account or legal action.
+        </p>
+    </div>
+    <div class="terms-agreement">
+        <label>
+            <input type="checkbox" id="agree-terms"> I agree to the Terms and Conditions.
+        </label>
+        <button id="proceed-btn" class="btn" disabled>Proceed to Payment</button>
+        <script defer src="ptm.js"></script>
+    </div>
+</section>
