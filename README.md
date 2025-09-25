@@ -1,0 +1,1 @@
+Jeevan-Aadhar is a comprehensive web application designed to streamline the management of donor and institute information. The platform offers a user-friendly interface for donors to register and make contributions, while institutions can manage their profiles and track donations efficiently.
