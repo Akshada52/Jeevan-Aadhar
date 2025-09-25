@@ -1,0 +1,8 @@
+# Demo Flask Server Dependencies
+Flask==2.3.3
+Flask-CORS==4.0.0
+
+# Note: Database dependencies removed for demo version
+# For production, add:
+# Flask-SQLAlchemy==3.0.5  # For SQLite/PostgreSQL
+# pymongo==4.5.0          # For MongoDB

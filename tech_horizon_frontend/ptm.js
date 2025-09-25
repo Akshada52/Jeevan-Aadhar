@@ -33,29 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     proceedBtn.addEventListener('click', () => {
-        const options = {
-            key: 'YOUR_RAZORPAY_KEY_ID', // Replace with your Razorpay Key ID
-            amount: 50000, // Amount in paise (e.g., 50000 = ₹500)
-            currency: 'INR',
-            name: 'Jeevan Aadhar',
-            description: 'Payment for Donation',
-            image: 'https://example.com/logo.png', // Your logo URL
-            handler: function (response) {
-                alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
-                window.location.href = 'payment-success.html';
-            },
-            prefill: {
-                name: 'John Doe', // Prefill customer name
-                email: 'john.doe@example.com', // Prefill customer email
-                contact: '9999999999', // Prefill customer phone number
-            },
-            theme: {
-                color: '#3399cc', // Customize the payment modal theme
-            },
-        };
-
-        const rzp = new Razorpay(options);
-        rzp.open();
+        // Demo payment integration - replace with actual payment gateway
+        alert('Demo: Payment integration would be implemented here');
+        console.log('Note: Payment gateway integration removed for public repository');
+        // Redirect to a demo success page
+        setTimeout(() => {
+            alert('Demo: Payment would be processed here');
+        }, 1000);
     });
 });
 

@@ -1,0 +1,19 @@
+{
+  "name": "jeevan-aadhar-backend-demo",
+  "version": "1.0.0",
+  "description": "Demo backend server for Jeevan Aadhar donation platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": ["donation", "humanitarian", "demo"],
+  "author": "TechHorizon Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
